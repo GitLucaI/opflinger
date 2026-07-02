@@ -192,8 +192,8 @@ local function LHVIPFF_fake_script() -- MainUI.LocalScript
 			if currentSpin then currentSpin:Destroy() end
 	
 			char.Humanoid.PlatformStand = false
-			if v:IsA("BasePart") then
-   				 v.CanCollide = true
+			for _, v in pairs(char:GetDescendants()) do
+				if v:IsA("BasePart") then v.CanCollide = true end
 			end
 	
 			root.CFrame = originalCFrame
