@@ -32,7 +32,7 @@ TextBox.BackgroundColor3 = Color3.fromRGB(85, 85, 85)
 TextBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextBox.BorderSizePixel = 0
 TextBox.Position = UDim2.new(0.0399999991, 0, 0.25, 0)
-TextBox.Size = UDim2.new(0.920000017, 0, 0.25, 0)maxim
+TextBox.Size = UDim2.new(0.920000017, 0, 0.25, 0)
 TextBox.Font = Enum.Font.SourceSans
 TextBox.PlaceholderText = "Target"
 TextBox.Text = ""
@@ -86,7 +86,7 @@ Maximize.Parent = LucasFlingGui
 Maximize.BackgroundColor3 = Color3.fromRGB(255, 106, 108)
 Maximize.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Maximize.BorderSizePixel = 0
-Maximize.Position = UDim2.new(0, 0, 0.75, 0)
+Maximize.Position = UDim2.new(0, 0, 0.23, 0)
 Maximize.Size = UDim2.new(0.0324254222, 0, 0.0624219738, 0)
 Maximize.Font = Enum.Font.SourceSansBold
 Maximize.Text = "+"
@@ -193,7 +193,11 @@ local function LHVIPFF_fake_script() -- MainUI.LocalScript
 	
 			char.Humanoid.PlatformStand = false
 			for _, v in pairs(char:GetDescendants()) do
-				if v:IsA("BasePart") then v.CanCollide = true end
+				if v:IsA("BasePart") then
+					if v.Name == "Torso" or v.Name == "UpperTorso" or v.Name == "Head" or v.Name == "HumanoidRootPart" then
+						v.CanCollide = true
+					end
+				end
 			end
 	
 			root.CFrame = originalCFrame
