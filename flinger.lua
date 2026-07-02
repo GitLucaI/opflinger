@@ -193,7 +193,7 @@ local function LHVIPFF_fake_script() -- MainUI.LocalScript
 	
 			char.Humanoid.PlatformStand = false
 			for _, v in pairs(char:GetDescendants()) do
-				if v:IsA("BasePart") then v.CanCollide = true end
+				if v:IsA("BasePart") and v.Name == "Head" or v.Name == "Torso" or v.Name == "HumanoidRootPart" then v.CanCollide = true end
 			end
 	
 			root.CFrame = originalCFrame
