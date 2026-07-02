@@ -18,6 +18,8 @@ LucasFlingGui.Parent = game:GetService("CoreGui")
 LucasFlingGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 MainUI.Name = "MainUI"
+MainUI.Active = true
+MainUI.Draggable = true
 MainUI.Parent = LucasFlingGui
 MainUI.BackgroundColor3 = Color3.fromRGB(90, 90, 90)
 MainUI.BorderColor3 = Color3.fromRGB(0, 0, 0)
