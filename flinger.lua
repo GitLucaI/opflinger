@@ -192,7 +192,7 @@ local function LHVIPFF_fake_script() -- MainUI.LocalScript
 			if currentSpin then currentSpin:Destroy() end
 	
 			char.Humanoid.PlatformStand = false
-			if v:IsA("BasePart") and (v.Name == "Head" or v.Name == "Torso" or v.Name == "UpperTorso" or v.Name == "LowerTorso" or v.Name == "HumanoidRootPart") then
+			if v:IsA("BasePart") then
    				 v.CanCollide = true
 			end
 	
